@@ -1,17 +1,11 @@
 (ns notifier-clojure.core
   (:gen-class)
   (:require [org.httpkit.server :as server]
-            [clojure.data.json :as json])) 
-
-(defn health-app [req] {
-   :status 200
-   :headers { "Content-Type" "application/json" }
-   :body (json/write-str { :status "online" :success true })
-  })
+            [notifier-clojure.routes.routes :refer [app-routes]]))
 
 (defn -main
   "Ponto de entrada da aplicação"
-  [& args]
-  (let [port 8081]
-    (server/run-server #'health-app {:port port})
+  []
+  (let [port 3000]
+    (server/run-server #'app-routes {:port port})
     (println (str "Rodando o servidor em http://127.0.0.1:" port "/"))))

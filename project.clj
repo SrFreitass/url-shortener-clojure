@@ -7,5 +7,6 @@
   :dependencies [[org.clojure/clojure "1.11.1"]
                  [http-kit "2.8.1"]
                  [org.clojure/data.json "2.5.1"] 
+                 [compojure "1.7.2"]
                 ]
   :repl-options {:init-ns notifier-clojure.core})
