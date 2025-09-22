@@ -8,5 +8,8 @@
                  [http-kit "2.8.1"]
                  [org.clojure/data.json "2.5.1"] 
                  [compojure "1.7.2"]
+                 [ring/ring-json "0.5.1"]
+                 [com.taoensso/carmine "3.4.1"]
+                 [environ "1.2.0"]
                 ]
   :repl-options {:init-ns notifier-clojure.core})

@@ -1,0 +1,7 @@
+services:
+  redis:
+    image: redis:8-alpine
+    volumes:
+      - /var/lib/redis:/var/lib/redis
+    ports:
+      - 6379:6379

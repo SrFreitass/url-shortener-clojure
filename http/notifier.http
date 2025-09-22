@@ -1,0 +1,11 @@
+GET http://localhost:3000/health
+
+###
+
+POST http://localhost:3000/short
+Content-Type: application/json
+
+{
+   "url": "freitas@freitasdev.com.br"
+}
+
