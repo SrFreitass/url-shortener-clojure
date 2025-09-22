@@ -7,6 +7,6 @@
 
 (defroutes app-routes
   (GET "/" [] "It's works")
-  (POST "/short" [] (mj/wrap-json-body short-handler))
+  (POST "/short" [] (mj/wrap-json-body short-handler { :keywords? true }))
   (route/not-found "Not found")
   )

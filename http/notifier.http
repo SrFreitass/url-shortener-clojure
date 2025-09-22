@@ -6,6 +6,6 @@ POST http://localhost:3000/short
 Content-Type: application/json
 
 {
-   "url": "freitas@freitasdev.com.br"
+   "url": "https://freitasdev.com.br"
 }
 

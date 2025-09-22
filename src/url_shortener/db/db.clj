@@ -1,7 +1,6 @@
 (ns url-shortener.db.db
   (:gen-class)
-  (:require [taoensso.carmine :as car]
-            ))
+  (:require [taoensso.carmine :as car]))
 
 
 (defonce redis-conn-pool (car/connection-pool {}))
@@ -9,5 +8,5 @@
 (def redis-conn-spec {:uri "redis://default:admin@127.0.0.1:6379"})
 (def redis-wcar-opts { :pool redis-conn-pool :spec redis-conn-spec})
 
-(defn create-url [short-id url] (car/wcar redis-wcar-opts (car/set short-id url car/set url short-id)))
+(defn create-url [short-id url] (car/wcar redis-wcar-opts (car/set short-id url)))
 (defn get-url [url] (car/wcar redis-wcar-opts (car/get url)))
