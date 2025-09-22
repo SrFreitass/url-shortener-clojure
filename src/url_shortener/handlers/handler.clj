@@ -1,8 +1,8 @@
-(ns notifier-clojure.handlers.handler
+(ns url-shortener.handlers.handler
   (:gen-class)
   (:require [clojure.data.json :as json]
             [taoensso.carmine :as car :refer [wcar]]
-            [notifier-clojure.db.db :as db])
+            [url-shortener.db.db :as db])
 )
   
 (defn short-handler [req] (let [notifier-json (:body req)]

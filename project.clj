@@ -1,9 +1,9 @@
-(defproject notifier-clojure "0.1.0-SNAPSHOT"
+(defproject url-shortener "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
             :url "https://www.eclipse.org/legal/epl-2.0/"}
-  :main notifier-clojure.core
+  :main url-shortener.core
   :dependencies [[org.clojure/clojure "1.11.1"]
                  [http-kit "2.8.1"]
                  [org.clojure/data.json "2.5.1"] 
@@ -12,4 +12,4 @@
                  [com.taoensso/carmine "3.4.1"]
                  [environ "1.2.0"]
                 ]
-  :repl-options {:init-ns notifier-clojure.core})
+  :repl-options {:init-ns url-shortener.core})

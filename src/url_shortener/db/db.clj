@@ -1,4 +1,4 @@
-(ns notifier-clojure.db.db
+(ns url-shortener.db.db
   (:gen-class)
   (:require [taoensso.carmine :as car]
             ))

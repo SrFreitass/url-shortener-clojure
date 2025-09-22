@@ -1,7 +1,7 @@
-(ns notifier-clojure.core
+(ns url-shortener.core
   (:gen-class)
   (:require [org.httpkit.server :as server]
-            [notifier-clojure.routes.routes :refer [app-routes]]))
+            [url-shortener.routes.routes :refer [app-routes]]))
 
 (defn -main
   "Ponto de entrada da aplicação"
