@@ -1,5 +1,4 @@
-GET http://localhost:3000/health
-
+GET http://localhost:3000/freitasdev
 ###
 
 POST http://localhost:3000/short
