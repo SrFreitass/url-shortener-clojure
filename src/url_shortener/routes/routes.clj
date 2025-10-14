@@ -2,11 +2,11 @@
   (:gen-class)
   (:require [compojure.core :refer [GET POST defroutes context]]
             [compojure.route :as route]
-            [ring.middleware.json :as mj]
-            [url-shortener.handlers.handler :refer [ short-handler redirect-by-short-id]]))
+            [url-shortener.handlers.handler :refer [ short-handler redirect-by-short-id]]
+            [front-end.index]))
 
 (defroutes app-routes
-  (GET "/" [] "It's works")
+  (GET "/" [] front-end.index/index)
   (GET "/:id" [] redirect-by-short-id)
-  (POST "/short" [] (mj/wrap-json-body short-handler {:keywords? true}))
+  (POST "/api/short-url" [] short-handler)
   (route/not-found "Not found"))
